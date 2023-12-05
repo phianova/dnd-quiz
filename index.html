@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Which DND character class are you?</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel=icon href="./images/questionMark.png"></link>
 </head>
 <body class="font-mono bg-[url('./images/questionMark.png')] bg-repeat bg-[length:100px]">
-    <div class="bg-white bg-opacity-60 h-full fixed">
+    <div class="bg-white bg-opacity-60 h-screen">
     <header class="h-1/12 w-full mt-5 mb-10 py-5 text-center bg-purple-300 shadow-lg">
         <h1 class="text-3xl lg:text-5xl font-bold p-3">Which DND character class are you?</h1>
         <p>Take the quiz and find out!</p>
@@ -16,13 +17,26 @@
         <section id="start-screen" class="text-center mx-auto">
             <!--TODO turn classes into carousel!-->
             <h2 class="text-lg font-bold bg-purple-900 text-white p-7 rounded-full mx-auto lg:mt-10">Want to play DND but don't know what path to choose to start your adventure? Click below to start the quiz and find the character class that best represents you!</h2>
-            <button id="start-button" onclick="startQuiz()" class="text-5xl font-bold bg-purple-300 border-4 border-purple-800 border-opacity-40 hover:bg-purple-900 hover:bg-opacity-80 hover:text-white py-5 px-7 mt-10 mb-20 rounded-full">Start quiz</button>
+            <button onclick="startQuiz()" class="text-5xl font-bold bg-purple-300 border-4 border-purple-800 border-opacity-40 hover:bg-purple-900 hover:bg-opacity-80 hover:text-white py-5 px-7 mt-10 mb-20 rounded-full">Start quiz</button>
         </section>
-        <section id="path-question">
-
+        <section id="path-question" class="flex flex-col items-center hidden">
+            <h2 id="path-question-question" class="text-2xl p-5 font-bold">How magical are you?</h2>
+            <div class="flex flex-col justify-around items-base w-10/12 mx-auto my-5">
+                <div class="py-3"><label for="path1" class="pr-5">Ew, not at all. Let's keep it real here.</label><input id="path1" name="path" type="radio" value="path1"  required></div>
+                <div class="py-3"><label for="path2" class="pr-5">Magic runs through my veins! Watch me bend this spoon!</label><input id="path2" name="path" type="radio" value="path2" required></div>
+                <div class="py-3"><label for="path3" class="pr-5">Maybe I got a lil' sparkle in me...</label><input id="path3" name="path" type="radio" value="path3" required></div>
+            </div>
+            <button onclick="determinePath()" class="mx-auto text-center text-xl font-bold bg-purple-300 border-4 border-purple-800 border-opacity-40 hover:bg-purple-900 hover:bg-opacity-80 hover:text-white py-5 px-7 mt-5 rounded-full">Next question</button>
         </section>
-        <section id="question">
-
+        <section id="question" class="flex flex-col items-center hidden">
+            <h2 id="question-question" class="text-2xl p-5 font-bold">Question text</h2>
+            <div class="flex flex-col justify-around items-base w-10/12 mx-auto my-5">
+                <div class="py-3"><label id="answer1-label" for="answer1" class="pr-5">Answer 1</label><input id="answer1" name="question" type="radio" value="answer1" required></div>
+                <div class="py-3"><label id="answer2-label" for="answer2" class="pr-5">Answer 2</label><input id="answer2" name="question" type="radio" value="answer2" required></div>
+                <div class="py-3"><label id="answer3-label" for="answer3" class="pr-5">Answer 3</label><input id="answer3" name="question" type="radio" value="answer3" required></div>
+                <div class="py-3"><label id="answer4-label" for="answer4" class="pr-5">Answer 4</label><input id="answer4" name="question" type="radio" value="answer4" required></div>
+            </div>
+            <button id="next-button" onclick="nextQuestion()" class="mx-auto text-center text-xl font-bold bg-purple-300 border-4 border-purple-800 border-opacity-40 hover:bg-purple-900 hover:bg-opacity-80 hover:text-white py-5 px-7 mt-5 rounded-full">Next question</button>
         </section>
         <section id="results">
 
@@ -81,6 +95,6 @@
         </div>
     </footer>
     </div>
-    <script src="quizLogic.js"></script>
+    <script src="./quizLogic.js"></script>
 </body>
 </html>
