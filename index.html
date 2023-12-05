@@ -4,67 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Which DND character class are you?</title>
-    
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>Which DND character class are you?</h1>
+<body class="font-mono bg-[url('./images/questionMark.png')] bg-repeat bg-[length:100px]">
+    <div class="bg-white bg-opacity-60 h-full fixed">
+    <header class="h-1/12 w-full mt-5 mb-10 py-5 text-center bg-purple-300 shadow-lg">
+        <h1 class="text-3xl lg:text-5xl font-bold p-3">Which DND character class are you?</h1>
         <p>Take the quiz and find out!</p>
     </header>
-    <main>
-        <section id="start-screen">
-            <div id="classes">
-                <div>
-                    <img src="" alt="">
-                    <p>Barbarian</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Bard</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Cleric</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Druid</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Fighter</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Monk</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Paladin</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Ranger</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Rogue</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Sorcerer</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Warlock</p>
-                </div>
-                <div>
-                    <img src="" alt="">
-                    <p>Wizard</p>
-                </div>
-            </div>
-            <h2>Click below to find the character class that best represents you</h2>
-            <p></p>
+    <main class="w-11/12 mx-auto bg-white rounded-3xl h-10/12 p-10 border-2 border-gray-400 shadow-lg">
+        <section id="start-screen" class="text-center mx-auto">
+            <!--TODO turn classes into carousel!-->
+            <h2 class="text-lg font-bold bg-purple-900 text-white p-7 rounded-full mx-auto lg:mt-10">Want to play DND but don't know what path to choose to start your adventure? Click below to start the quiz and find the character class that best represents you!</h2>
+            <button id="start-button" onclick="startQuiz()" class="text-5xl font-bold bg-purple-300 border-4 border-purple-800 border-opacity-40 hover:bg-purple-900 hover:bg-opacity-80 hover:text-white py-5 px-7 mt-10 mb-20 rounded-full">Start quiz</button>
         </section>
         <section id="path-question">
 
@@ -76,6 +28,59 @@
 
         </section>
     </main>
+    <footer class="h-1/12 w-full absolute bottom-0 bg-purple-300 border-t-4 border-purple-800 border-opacity-20">
+        <div id="classes" class="my-3 flex flex-row flex-shrink justify-around items-baseline">
+            <div class="p-3">
+                <img src="./images/barbarian.svg" alt="">
+                <p class="py-2">Barbarian</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/bard.svg" alt="">
+                <p class="py-2">Bard</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/cleric.svg" alt="">
+                <p class="py-2">Cleric</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/druid.svg" alt="">
+                <p class="py-2">Druid</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/fighter.svg" alt="">
+                <p class="py-2">Fighter</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/monk.svg" alt="">
+                <p class="py-2">Monk</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/paladin.svg" alt="">
+                <p class="py-2">Paladin</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/ranger.svg" alt="">
+                <p class="py-2">Ranger</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/rogue.svg" alt="">
+                <p class="py-2">Rogue</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/sorcerer.svg" alt="">
+                <p class="py-2">Sorcerer</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/warlock.svg" alt="">
+                <p class="py-2">Warlock</p>
+            </div>
+            <div class="p-3">
+                <img src="./images/wizard.svg" alt="">
+                <p class="py-2">Wizard</p>
+            </div>
+        </div>
+    </footer>
+    </div>
     <script src="quizLogic.js"></script>
 </body>
 </html>
