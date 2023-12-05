@@ -79,7 +79,7 @@ Path One:
 Path Two:
 1. What is power?
     Options:
-    a. The life force of the Earth, harnessed by becoming one with it. A mighty natural force. A- (Druid)
+    a. The life force of the Earth, harnessed by becoming one with it. A mighty natural force (Druid)
     b. The glory of my bloodline. The gift of my ancestors. I. Am. Power. (Sorceror)
     c. Knowledge, honed and built up over centuries (Wizard)
     d. I don't know but daddy gave me magic fingies :3 (Warlock)
