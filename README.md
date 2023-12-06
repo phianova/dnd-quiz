@@ -96,33 +96,31 @@ Path One:
     d. Wagon Wheel - Old Crow Medicine Show (Ranger)
 
 Path Two:
-1. What is power?
+1. What is power to you?
     a. The life force of the Earth, harnessed by becoming one with it. A mighty natural force (Druid)
     b. The glory of my bloodline. The gift of my ancestors. I. Am. Power. (Sorceror)
     c. Knowledge, honed and built up over centuries (Wizard)
-    d. I don't know but daddy gave me magic fingies :3 (Warlock)
+    d. I don't know but daddy gave me magics (Warlock)
 2. Favourite song?
     a. White Winter Hymnal - Fleet Foxes (Druid)
     b. Butterfly - Crazy Town (Warlock)
     c. Firestarter - The Prodigy (Sorcerer)
     d. Season of the Witch - Donovan (Wizard)
-3. Question
-    a. (Warlock)
-    b. (Sorcerer)
-    c. (Wizard)
-    d. (Druid)
-4. Question
-    a. (Wizard)
-    b. (Druid)
-    c. (Warlock)
-    d. (Sorcerer)
-5. Question
-    a. (Sorcerer)
-    b. (Warlock)
-    c. (Druid)
-    d. (Wizard)
-
-
+3. What do you want to be when you grow up?
+    a. A professional sugar baby (Warlock)
+    b. Rich and powerful (Sorcerer)
+    c. An expert in my chosen field (Wizard)
+    d. A gardener (Druid)
+4. Accessorize! What are you pairing your outfit with tonight?
+    a. A pair of rounded spectacles with a brass rim (Wizard)
+    b. Socks and sandals (Druid)
+    c. A diamond tennis bracelet someone bought me (Warlock)
+    d. Some leather gloves to protect me from fire (Sorcerer)
+5. Who do you look up to?
+    a. My ancestors (Sorcerer)
+    b. Big power demon daddy (Warlock)
+    c. Mother Earth (Druid)
+    d. Those who have studied my craft before me (Wizard)
 
 Path Three:
 1. Are you religious?
@@ -135,21 +133,21 @@ Path Three:
     b. Kung-Fu Fighting - Carl Douglas (Monk)
     c. Faith - George Michael (Paladin)
     d. Thank You For The Music - ABBA (Bard)
-3. Question
-    a. (Bard)
-    b. (Monk)
-    c. (Paladin)
-    d. (Cleric)
-4. Question
-    a. (Cleric)
-    b. (Paladin)
-    c. (Bard)
-    d. (Monk)
-5. Question
-    a. (Monk)
-    b. (Bard)
-    c. (Cleric)
-    d. (Paladin)
+3. What makes you smile?
+    a. A sick guitar riff (Bard)
+    b. Peace and tranquillity (Monk)
+    c. Converting heathens (Paladin)
+    d. Helping others (Cleric)
+4. What's your strategy for dealing with a hostile enemy?
+    a. I'm a lover not a fighter! Stay far away and help out whoever's in trouble (Cleric)
+    b. Seek guidance from a higher power and run straight in to save the day (Paladin)
+    c. Get everyone dancing! Can't be mad if you're dancing (Bard)
+    d. Punch it til it dies (Monk)
+5. What was your favourite class at school?
+    a. Gymnastics (Monk)
+    b. Music (Bard)
+    c. Biology (Cleric)
+    d. Religious Studies (Paladin)
 
 
 
