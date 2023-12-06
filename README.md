@@ -10,7 +10,7 @@ I'm going to try and implement not quite a "mostly As" style scoring system but 
 
 I'll either have results options that altogether add up to each of the 12 classes, OR I'll have two different "paths" the quiz can end up going down depending on an initial question set.
 
-I'd also like the results page to display an image/card based on the result.
+I'd also like the results page to display an image/card based on the result. I'd like to animate this card with a little pulse if I can!
 
 ## Project Brief ##
 _The aim of this project is to create a quiz that will ask a series of questions and produce a result
@@ -67,30 +67,89 @@ Options:
 2. Magic runs through my veins! Watch me bend this spoon! - leads to: Druid, Sorcerer, Warlock, Wizard
 3. Maybe I got a lil' sparkle in me... - leads to: Bard, Cleric, Monk, Paladin
 
-From there, we get a different set of questions per path:
+From there, we get a different set of 5 questions per path:
 Path One:
 1. In a battle sitch, where do you want to be?
-    Options:
     a. CHAAAAAAARGEEEEEE! (Barbarian)
     b. Gettin' all up in their business (Fighter)
     c. Far, far away! But I'm not scared, I- I promise! (Ranger)
     d. Waiting in the shadows (Rogue)
+2. What's your favourite animal?
+    a. Hmm...maybe a rat? Or a bat? Or a snake? (Rogue)
+    b. ONE I CAN RIDE INTO BATTLE! (Barbarian)
+    c. Something cool like a tiger (Fighter)
+    d. All. Of. Them. (Ranger)
+3. What would be your strategy for surviving an apocalytic event?
+    a. Hide 'til it's all over (Rogue)
+    b. Utilise my expert tracking skills to become a master of this new, challenging environment (Ranger)
+    c. Acquire a rag-tag team of misfits and take out anyone that stands in our way (Fighter)
+    d. RUN HEADLONG AT THE APOCALYPSE AND DIE A GLORIOUS DEATH! (Barbarian)
+4. Favourite food?
+    a. Popcorn, while I'm watching the events of a battle unfold from the shadows (Rogue)
+    b. MEAT! (Barbarian)
+    c. I dunno I guess a burger? (Fighter)
+    d. Venison, fresh from the tip of my arrow (Ranger)
+5. Favourite song?
+    a. Eye of the Tiger - Survivor (Fighter)
+    b. Bodies - Drowning Pool (Barbarian)
+    c. bad guy - Billie Eilish (Rogue)
+    d. Wagon Wheel - Old Crow Medicine Show (Ranger)
 
 Path Two:
 1. What is power?
-    Options:
-    a. The life force of the Earth, harnessed by becoming one with it. A mighty natural force. A- (Druid)
+    a. The life force of the Earth, harnessed by becoming one with it. A mighty natural force (Druid)
     b. The glory of my bloodline. The gift of my ancestors. I. Am. Power. (Sorceror)
     c. Knowledge, honed and built up over centuries (Wizard)
     d. I don't know but daddy gave me magic fingies :3 (Warlock)
+2. Favourite song?
+    a. White Winter Hymnal - Fleet Foxes (Druid)
+    b. Butterfly - Crazy Town (Warlock)
+    c. Firestarter - The Prodigy (Sorcerer)
+    d. Season of the Witch - Donovan (Wizard)
+3. Question
+    a. (Warlock)
+    b. (Sorcerer)
+    c. (Wizard)
+    d. (Druid)
+4. Question
+    a. (Wizard)
+    b. (Druid)
+    c. (Warlock)
+    d. (Sorcerer)
+5. Question
+    a. (Sorcerer)
+    b. (Warlock)
+    c. (Druid)
+    d. (Wizard)
+
 
 
 Path Three:
 1. Are you religious?
-    Options:
     a. Unless MUSIC is a religion then no sir * shreds on guitar * (Bard)
     b. I'm a strong believer in the healing power of prayer (Cleric)
     c. I believe in a higher power but I'm mostly about meditation, getting centred, feeling the vibes (Monk)
     d. I would both kill and die for my faith. I am a literal CRUSADER. ALL SHALL FACE THE GLORY OF (insert deity here) (Paladin)
+2. Favourite song?
+    a. Like a Prayer - Madonna (Cleric)
+    b. Kung-Fu Fighting - Carl Douglas (Monk)
+    c. Faith - George Michael (Paladin)
+    d. Thank You For The Music - ABBA (Bard)
+3. Question
+    a. (Bard)
+    b. (Monk)
+    c. (Paladin)
+    d. (Cleric)
+4. Question
+    a. (Cleric)
+    b. (Paladin)
+    c. (Bard)
+    d. (Monk)
+5. Question
+    a. (Monk)
+    b. (Bard)
+    c. (Cleric)
+    d. (Paladin)
+
 
 

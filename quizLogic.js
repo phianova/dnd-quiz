@@ -9,22 +9,70 @@
 Will track scores with object/array of scores for each class.
 */
 
-scoreObject = {
-    bard: 0,
-    barbarian: 0,
-    cleric: 0,
-    druid: 0,
-    fighter: 0,
-    monk: 0,
-    paladin: 0,
-    ranger: 0,
-    rogue: 0,
-    sorcerer: 0,
-    warlock: 0,
-    wizard: 0
-}
+classArray = [
+    {
+        class: "barbarian",
+        score: 0,
+        img: "./images/barbarian.svg"
+    },
+    {
+        class: "bard",
+        score: 0,
+        img: "./images/bard.svg"
+    },
+    {
+        class: "cleric",
+        score: 0,
+        img: "./images/cleric.svg"
+    },
+    {
+        class: "druid",
+        score: 0,
+        img: "./images/druid.svg"
+    },
+    {
+        class: "fighter",
+        score: 0,
+        img: "./images/fighter.svg"
+    },
+    {
+        class: "monk",
+        score: 0,
+        img: "./images/monk.svg"
+    },
+    {
+        class: "paladin",
+        score: 0,
+        img: "./images/paladin.svg"
+    },
+    {
+        class: "ranger",
+        score: 0,
+        img: "./images/ranger.svg"
+    },
+    {   
+        class: "rogue",
+        score: 0,
+        img: "./images/rogue.svg"
+    },
+    {
+        class: "sorcerer",
+        score: 0,
+        img: "./images/sorcerer.svg"
+    },
+    {
+        class: "warlock",
+        score: 0,
+        img: "./images/warlock.svg"
+    },
+    {
+        class: "wizard",  
+        score: 0,
+        img: "./images/wizard.svg"
+    }
+]
 
-//Question array for path 1
+//Question array for path 1 - collapse if you value your life
 const questionArray1 = [
     {
         question: "In a battle sitch, where do you want to be?",
@@ -46,398 +94,283 @@ const questionArray1 = [
         }
     },
     {
-        question: "",
+        question: "What's your favourite animal?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "Hmm...maybe a rat? Or a bat? Or a snake?",
+            class:"rogue"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "ONE I CAN RIDE INTO BATTLE!",
+            class:"barbarian"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "Something cool like a tiger ",
+            class:"fighter"
         },
         answer4: { 
-            answer: "",
-            class:""
+            answer: "All. Of. Them.",
+            class:"ranger"
         }
     },
     {
-        question: "",
+        question: "What would be your strategy for surviving an apocalytic event?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "Hide 'til it's all over",
+            class:"rogue"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "Utilise my expert tracking skills to become a master of this new, challenging environment",
+            class:"ranger"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "Acquire a rag-tag team of misfits and take out anyone that stands in our way",
+            class:"fighter"
         },
         answer4: { 
-            answer: "",
-            class:""
+            answer: "RUN HEADLONG AT THE APOCALYPSE AND DIE A GLORIOUS DEATH!",
+            class:"barbarian"
         }
     },
     {
-        question: "",
+        question: "Favourite food?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "Popcorn, while I'm watching the events of a battle unfold from the shadows",
+            class:"rogue"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "MEAT!",
+            class:"barbarian"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "I dunno I guess a burger?",
+            class:"fighter"
         },
         answer4: { 
-            answer: "",
-            class:""
+            answer: "Venison, fresh from the tip of my arrow",
+            class:"ranger"
         }
     },
     {
-        question: "",
+        question: "Favourite song?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "Eye of the Tiger - Survivor",
+            class:"fighter"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "Bodies - Drowning Pool",
+            class:"barbarian"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "bad guy - Billie Eilish",
+            class:"rogue"
         },
         answer4: { 
-            answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
+            answer: "Wagon Wheel - Old Crow Medicine Show",
+            class:"ranger"
         }
     }
 ]
 
-//Question array for path 2
+//Question array for path 2 - collapse if you value your life
 const questionArray2 = [
     {
-        question: "",
+        question: "What is power?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "The life force of the Earth, harnessed by becoming one with it. A mighty natural force",
+            class:"druid"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "The glory of my bloodline. The gift of my ancestors. I. Am. Power",
+            class:"sorcerer"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "Knowledge, honed and built up over centuries",
+            class:"wizard"
         },
         answer4: { 
-            answer: "",
-            class:""
+            answer: "I don't know but daddy gave me magic fingies :3",
+            class:"warlock"
+        }
+    },
+    {
+        question: "Favourite song?",
+        answer1: { 
+            answer: "White Winter Hymnal - Fleet Foxes",
+            class:"druid"
+        },
+        answer2: { 
+            answer: "Butterfly - Crazy Town",
+            class:"warlock"
+        },
+        answer3: { 
+            answer: "Firestarter - The Prodigy",
+            class:"sorcerer"
+        },
+        answer4: { 
+            answer: "Season of the Witch - Donovan",
+            class:"wizard"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"warlock"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"sorcerer"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"wizard"
         },
         answer4: { 
             answer: "",
-            class:""
+            class:"druid"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"wizard"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"druid"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"warlock"
         },
         answer4: { 
             answer: "",
-            class:""
+            class:"sorcerer"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"sorcerer"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"warlock"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"druid"
         },
         answer4: { 
             answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
+            class:"wizard"
         }
     }
 ]
 
-//Question array for path 3
+//Question array for path 3 - collapse if you value your life
 const questionArray3 = [
     {
-        question: "",
+        question: "Are you religious?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "Unless MUSIC is a religion then no sir *shreds on guitar*",
+            class:"bard"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "I'm a strong believer in the healing power of prayer",
+            class:"cleric"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "I believe in a higher power but I'm mostly about meditation, getting centred, feeling the vibes",
+            class:"monk"
         },
         answer4: { 
-            answer: "",
-            class:""
+            answer: "I would both kill and die for my faith. I am a literal CRUSADER. ALL SHALL FACE THE GLORY OF (insert deity here)",
+            class:"paladin"
+        }    
+    },
+    {
+        question: "Favourite song?",
+        answer1: { 
+            answer: "Like a Prayer - Madonna",
+            class:"cleric"
+        },
+        answer2: { 
+            answer: "Kung-Fu Fighting - Carl Douglas",
+            class:"monk"
+        },
+        answer3: { 
+            answer: "Faith - George Michael",
+            class:"monk"
+        },
+        answer4: { 
+            answer: "Thank You for the Music - ABBA",
+            class:"bard"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"bard"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"monk"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"paladin"
         },
         answer4: { 
             answer: "",
-            class:""
+            class:"cleric"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"cleric"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"paladin"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"bard"
         },
         answer4: { 
             answer: "",
-            class:""
+            class:"monk"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"monk"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"bard"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"cleric"
         },
         answer4: { 
             answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
+            class:"paladin"
         }
     }
 ]
 
-
 //Path question object:
-pathQuestion = {
+const pathQuestion = {
     path1: questionArray1,
     path2: questionArray2,
     path3: questionArray3
@@ -485,6 +418,7 @@ const nextQuestion = () => {
     //If currentQuestion is at max, call displayResult()
     if (currentQuestion === 6) {
         displayResult();
+        return false;
     }
     //Use DOM to change question text
     let questionText = document.getElementById("question-question");
@@ -499,6 +433,7 @@ const nextQuestion = () => {
     answer3Text.innerHTML = questionArray[currentQuestion-1].answer3.answer
     answer4Text.innerHTML = questionArray[currentQuestion-1].answer4.answer
 
+    //Use DOM to change input name
     let answer1Input = document.getElementById("answer1");
     let answer2Input = document.getElementById("answer2");
     let answer3Input = document.getElementById("answer3");
@@ -509,11 +444,13 @@ const nextQuestion = () => {
     answer3Input.name = "question" + currentQuestion;
     answer4Input.name = "question" + currentQuestion;
 
+    //Use DOM to reset radio inputs
     answer1Input.checked = false;
     answer2Input.checked = false;
     answer3Input.checked = false;
     answer4Input.checked = false;
 
+    //Use DOM to set value of answers to correct DND class for scoring
     answer1Input.value = questionArray[currentQuestion-1].answer1.class;
     answer2Input.value = questionArray[currentQuestion-1].answer2.class;
     answer3Input.value = questionArray[currentQuestion-1].answer3.class;
@@ -522,17 +459,35 @@ const nextQuestion = () => {
 }
 
 const trackScore = () => {
-    //Where value = class, scoreObject.(name "class") ++;
-    let questionName = "question" + currentQuestion;
-    let answer = answerValueFunction(questionName);
-    scoreObject[answer]++;
+    //Where value = class, classArray.("class") ++;
+    if (currentQuestion > 0) {
+        let questionName = "question" + currentQuestion;
+        let answer = answerValueFunction(questionName);
+        currentClassObject = classArray.find((a) => a.class === answer);
+        currentClassObject.score ++;
+    }
 }
 
 const displayResult = () => {
-    //Check max scores and determine results type
+    //Check max scores and determine results type 
+    let finalClass = "";
+    let finalClassScore = 0;
+    let finalClassImg = "";
+    for (let j = 0; j < classArray.length; j++) {
+        if (classArray[j].score > finalClassScore) {
+            finalClassScore = classArray[j].score;
+            finalClass = classArray[j].class;
+            finalClassImg = classArray[j].img
+        }
+    }
+    let resultsText = document.getElementById("results-type");
+    let resultsImage = document.getElementById("results-image");
+    resultsText.innerText = capitalLetter(finalClass);
+    resultsImage.src = finalClassImg;
 
     //Hide questions screen, display results screen (incl. restart button)
-
+    switchDisplay("question", false);
+    switchDisplay("results", true);
 }
 
 const restartQuiz = () => {
@@ -561,3 +516,7 @@ const answerValueFunction = (name) => {
     return answerValue;
 }
 
+//REUSABLE: Capitalise class names for display
+const capitalLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
