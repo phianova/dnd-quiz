@@ -410,18 +410,80 @@ const nextQuestion = () => {
     //Called first in determinePath() and then repeatedly on click of next question button
     //Call trackScore function
     trackScore();
+
     //Increment current question upward
     currentQuestion ++;
+
     //If currentQuestion is at 4, change button text
     if (currentQuestion === 5) {
         document.getElementById("next-button").innerText = "See results"
     }
+
     //If currentQuestion is at max, call displayResult()
     if (currentQuestion === 6) {
         displayResult();
         return false;
     }
-    //Use DOM to change question text
+
+    //Use DOM to change question text, input names and input values
+    answerChanges();
+
+    //Use DOM to reset radio inputs
+    resetInput("question" + currentQuestion);
+}
+
+const trackScore = () => {
+    //Called in nextQuestion()
+    //Where answer = class, add to class score
+    if (currentQuestion > 0) {
+        let questionName = "question" + currentQuestion;
+        let answer = answerValueFunction(questionName);
+        currentClassObject = classArray.find((a) => a.class === answer);
+        currentClassObject.score ++;
+    }
+}
+
+const displayResult = () => {
+    //Called when currentQuestion reaches max
+    //Check max scores and determine results type 
+    let finalClass = "";
+    let finalClassScore = 0;
+    let finalClassImg = "";
+    for (let j = 0; j < classArray.length; j++) {
+        if (classArray[j].score > finalClassScore) {
+            finalClassScore = classArray[j].score;
+            finalClass = classArray[j].class;
+            finalClassImg = classArray[j].img
+        }
+    }
+
+    //Change text and image dependent on result
+    let resultsText = document.getElementById("results-type");
+    let resultsImage = document.getElementById("results-image");
+    resultsText.innerText = capitalLetter(finalClass);
+    resultsImage.src = finalClassImg;
+
+    //Hide questions screen, display results screen (incl. restart button)
+    switchDisplay("question", false);
+    switchDisplay("results", true);
+}
+
+const restartQuiz = () => {
+    //Called on click of restart button
+    //Reset score and path values
+    currentQuestion = 0;
+    questionArray = [];
+    for (i=0; i < classArray.length; i++) {
+        classArray[i].score = 0;
+    }
+    
+    //hide results screen, display start screen
+    switchDisplay("results", false);
+    switchDisplay("start-screen", true);
+}
+
+const answerChanges = () => {
+    //Use DOM to change question and answer text
     let questionText = document.getElementById("question-question");
     let answer1Text = document.getElementById("answer1-label");
     let answer2Text = document.getElementById("answer2-label");
@@ -445,13 +507,6 @@ const nextQuestion = () => {
     answer3Input.name = "question" + currentQuestion;
     answer4Input.name = "question" + currentQuestion;
 
-    //Use DOM to reset radio inputs
-    resetInput("question" + currentQuestion)
-    /*answer1Input.checked = false;
-    answer2Input.checked = false;
-    answer3Input.checked = false;
-    answer4Input.checked = false;*/
-
     //Use DOM to set value of answers to correct DND class for scoring
     answer1Input.value = questionArray[currentQuestion-1].answer1.class;
     answer2Input.value = questionArray[currentQuestion-1].answer2.class;
@@ -459,53 +514,6 @@ const nextQuestion = () => {
     answer4Input.value = questionArray[currentQuestion-1].answer4.class;
 
 }
-
-const trackScore = () => {
-    //Called in nextQuestion()
-    //Where value = class, classArray.("class") ++;
-    if (currentQuestion > 0) {
-        let questionName = "question" + currentQuestion;
-        let answer = answerValueFunction(questionName);
-        currentClassObject = classArray.find((a) => a.class === answer);
-        currentClassObject.score ++;
-    }
-}
-
-const displayResult = () => {
-    //Called when currentQuestion reaches max
-    //Check max scores and determine results type 
-    let finalClass = "";
-    let finalClassScore = 0;
-    let finalClassImg = "";
-    for (let j = 0; j < classArray.length; j++) {
-        if (classArray[j].score > finalClassScore) {
-            finalClassScore = classArray[j].score;
-            finalClass = classArray[j].class;
-            finalClassImg = classArray[j].img
-        }
-    }
-    let resultsText = document.getElementById("results-type");
-    let resultsImage = document.getElementById("results-image");
-    resultsText.innerText = capitalLetter(finalClass);
-    resultsImage.src = finalClassImg;
-
-    //Hide questions screen, display results screen (incl. restart button)
-    switchDisplay("question", false);
-    switchDisplay("results", true);
-}
-
-const restartQuiz = () => {
-    //Called on click of restart button
-    //hide results screen, display start screen
-    currentQuestion = 0;
-    questionArray = [];
-    for (i=0; i < classArray.length; i++) {
-        classArray[i].score = 0;
-    }
-    switchDisplay("results", false);
-    switchDisplay("start-screen", true);
-}
-
 
 //REUSABLE: Switch display function
 const switchDisplay = (id, status) => {
