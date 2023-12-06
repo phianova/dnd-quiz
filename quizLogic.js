@@ -82,117 +82,79 @@ const questionArray1 = [
         }
     },
     {
-        question: "",
+        question: "What's your favourite animal?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "Hmm...maybe a rat? Or a bat? Or a snake?",
+            class:"rogue"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "ONE I CAN RIDE INTO BATTLE!",
+            class:"barbarian"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "Something cool like a tiger ",
+            class:"fighter"
         },
         answer4: { 
-            answer: "",
-            class:""
+            answer: "All. Of. Them.",
+            class:"ranger"
         }
     },
     {
-        question: "",
+        question: "What would be your strategy for surviving an apocalytic event?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "Hide 'til it's all over",
+            class:"rogue"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "Utilise my expert tracking skills to become a master of this new, challenging environment",
+            class:"ranger"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "Acquire a rag-tag team of misfits and take out anyone that stands in our way",
+            class:"fighter"
         },
         answer4: { 
-            answer: "",
-            class:""
+            answer: "RUN HEADLONG AT THE APOCALYPSE AND DIE A GLORIOUS DEATH!",
+            class:"barbarian"
         }
     },
     {
-        question: "",
+        question: "Favourite food?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "Popcorn, while I'm watching the events of a battle unfold from the shadows",
+            class:"rogue"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "MEAT!",
+            class:"barbarian"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "I dunno I guess a burger?",
+            class:"fighter"
         },
         answer4: { 
-            answer: "",
-            class:""
+            answer: "Venison, fresh from the tip of my arrow",
+            class:"ranger"
         }
     },
     {
-        question: "",
+        question: "Favourite song?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "Eye of the Tiger - Survivor",
+            class:"fighter"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "Bodies - Drowning Pool",
+            class:"barbarian"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "bad guy - Billie Eilish",
+            class:"rogue"
         },
         answer4: { 
-            answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
+            answer: "Wagon Wheel - Old Crow Medicine Show",
+            class:"ranger"
         }
     }
 ]
@@ -219,117 +181,79 @@ const questionArray2 = [
         }
     },
     {
-        question: "",
+        question: "Favourite song?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "White Winter Hymnal - Fleet Foxes",
+            class:"druid"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "Butterfly - Crazy Town",
+            class:"warlock"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "Firestarter - The Prodigy",
+            class:"sorcerer"
         },
         answer4: { 
-            answer: "",
-            class:""
+            answer: "Season of the Witch - Donovan",
+            class:"wizard"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"warlock"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"sorcerer"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"wizard"
         },
         answer4: { 
             answer: "",
-            class:""
+            class:"druid"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"wizard"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"druid"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"warlock"
         },
         answer4: { 
             answer: "",
-            class:""
+            class:"sorcerer"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"sorcerer"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"warlock"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"druid"
         },
         answer4: { 
             answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
+            class:"wizard"
         }
     }
 ]
@@ -356,117 +280,79 @@ const questionArray3 = [
         }    
     },
     {
-        question: "",
+        question: "Favourite song?",
         answer1: { 
-            answer: "",
-            class:""
+            answer: "Like a Prayer - Madonna",
+            class:"cleric"
         },
         answer2: { 
-            answer: "",
-            class:""
+            answer: "Kung-Fu Fighting - Carl Douglas",
+            class:"monk"
         },
         answer3: { 
-            answer: "",
-            class:""
+            answer: "Faith - George Michael",
+            class:"monk"
         },
         answer4: { 
-            answer: "",
-            class:""
+            answer: "Thank You for the Music - ABBA",
+            class:"bard"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"bard"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"monk"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"paladin"
         },
         answer4: { 
             answer: "",
-            class:""
+            class:"cleric"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"cleric"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"paladin"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"bard"
         },
         answer4: { 
             answer: "",
-            class:""
+            class:"monk"
         }
     },
     {
         question: "",
         answer1: { 
             answer: "",
-            class:""
+            class:"monk"
         },
         answer2: { 
             answer: "",
-            class:""
+            class:"bard"
         },
         answer3: { 
             answer: "",
-            class:""
+            class:"cleric"
         },
         answer4: { 
             answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
-        }
-    },
-    {
-        question: "",
-        answer1: { 
-            answer: "",
-            class:""
-        },
-        answer2: { 
-            answer: "",
-            class:""
-        },
-        answer3: { 
-            answer: "",
-            class:""
-        },
-        answer4: { 
-            answer: "",
-            class:""
+            class:"paladin"
         }
     }
 ]
