@@ -561,13 +561,11 @@ const nextQuestion = () => {
 
 const trackScore = () => {
     //Where value = class, classObject.("class") ++;
-    //STUCK!! How do I access this part of the class object??
     let questionName = "question" + currentQuestion;
     let answer = answerValueFunction(questionName);
-    let property = classObject[answer]
-    console.log(property.score);
-    classObject.answer.score ++;
-    console.log(classObject);
+    if (currentQuestion > 0) {
+        classObject[answer].score ++;
+    }
 }
 
 const displayResult = () => {
