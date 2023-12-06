@@ -390,10 +390,8 @@ const startQuiz = () => {
 }
 
 const determinePath = () => {
-    //On click of button on path screen
-
-    //Select question array for path
-    //questionArray = pathQuestion.(path.value).value
+    //Called on click of button on path screen
+    //Select corresponding question array for selected path
     pathValue = answerValueFunction("path");
     questionArray = pathQuestion[pathValue];
 
@@ -404,9 +402,12 @@ const determinePath = () => {
     switchDisplay("question", true);
     nextQuestion();
 
-}
+    //Reset path inputs
+    resetInput("path");
+} 
 
 const nextQuestion = () => {
+    //Called first in determinePath() and then repeatedly on click of next question button
     //Call trackScore function
     trackScore();
     //Increment current question upward
@@ -445,10 +446,11 @@ const nextQuestion = () => {
     answer4Input.name = "question" + currentQuestion;
 
     //Use DOM to reset radio inputs
-    answer1Input.checked = false;
+    resetInput("question" + currentQuestion)
+    /*answer1Input.checked = false;
     answer2Input.checked = false;
     answer3Input.checked = false;
-    answer4Input.checked = false;
+    answer4Input.checked = false;*/
 
     //Use DOM to set value of answers to correct DND class for scoring
     answer1Input.value = questionArray[currentQuestion-1].answer1.class;
@@ -459,6 +461,7 @@ const nextQuestion = () => {
 }
 
 const trackScore = () => {
+    //Called in nextQuestion()
     //Where value = class, classArray.("class") ++;
     if (currentQuestion > 0) {
         let questionName = "question" + currentQuestion;
@@ -469,6 +472,7 @@ const trackScore = () => {
 }
 
 const displayResult = () => {
+    //Called when currentQuestion reaches max
     //Check max scores and determine results type 
     let finalClass = "";
     let finalClassScore = 0;
@@ -491,16 +495,22 @@ const displayResult = () => {
 }
 
 const restartQuiz = () => {
-    //Onclick of restart button
-    
+    //Called on click of restart button
     //hide results screen, display start screen
+    currentQuestion = 0;
+    questionArray = [];
+    for (i=0; i < classArray.length; i++) {
+        classArray[i].score = 0;
+    }
+    switchDisplay("results", false);
+    switchDisplay("start-screen", true);
 }
 
 
 //REUSABLE: Switch display function
 const switchDisplay = (id, status) => {
     let element = document.getElementById(id);
-    let display = (status) ? "block" : "none";
+    let display = (status) ? "flex" : "none";
     element.style.display = display;
 }
 
@@ -519,4 +529,14 @@ const answerValueFunction = (name) => {
 //REUSABLE: Capitalise class names for display
 const capitalLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+//REUSABLE: Reset radio inputs
+const resetInput = (name) => {
+    let inputsArray = document.getElementsByName(name);
+    for (let i = 0; i < inputsArray.length; i++) {
+        if (inputsArray[i].checked) {
+            inputsArray[i].checked = false;
+        }
+    }
 }
