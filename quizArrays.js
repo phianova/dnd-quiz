@@ -178,7 +178,7 @@ const questionArray2 = [
             class:"wizard"
         },
         answer4: { 
-            answer: "I don't know but daddy gave me magic fingies :3",
+            answer: "I don't know but daddy gave me magics",
             class:"warlock"
         }
     },
@@ -202,59 +202,59 @@ const questionArray2 = [
         }
     },
     {
-        question: "",
+        question: "What do you want to be when you grow up?",
         answer1: { 
-            answer: "",
+            answer: "A professional sugar baby",
             class:"warlock"
         },
         answer2: { 
-            answer: "",
+            answer: "Rich and powerful",
             class:"sorcerer"
         },
         answer3: { 
-            answer: "",
+            answer: "An expert in my chosen field",
             class:"wizard"
         },
         answer4: { 
-            answer: "",
+            answer: "A gardener",
             class:"druid"
         }
     },
     {
-        question: "",
+        question: "Accessorize! What are you pairing your outfit with tonight?",
         answer1: { 
-            answer: "",
+            answer: "A pair of rounded spectacles with a brass rim",
             class:"wizard"
         },
         answer2: { 
-            answer: "",
+            answer: "Socks and sandals",
             class:"druid"
         },
         answer3: { 
-            answer: "",
+            answer: "A diamond tennis bracelet someone bought me",
             class:"warlock"
         },
         answer4: { 
-            answer: "",
+            answer: "Some leather gloves to protect me from fire",
             class:"sorcerer"
         }
     },
     {
-        question: "",
+        question: "Who do you look up to?",
         answer1: { 
-            answer: "",
+            answer: "My ancestors",
             class:"sorcerer"
         },
         answer2: { 
-            answer: "",
+            answer: "Big power demon daddy",
             class:"warlock"
         },
         answer3: { 
-            answer: "",
+            answer: "Mother Earth",
             class:"druid"
         },
         answer4: { 
-            answer: "",
+            answer: "Those who have studied my craft before me",
             class:"wizard"
         }
     }
@@ -301,59 +301,59 @@ const questionArray3 = [
         }
     },
     {
-        question: "",
+        question: "What makes you smile?",
         answer1: { 
-            answer: "",
+            answer: "A sick guitar riff",
             class:"bard"
         },
         answer2: { 
-            answer: "",
+            answer: "Peace and tranquillity",
             class:"monk"
         },
         answer3: { 
-            answer: "",
+            answer: "Converting heathens",
             class:"paladin"
         },
         answer4: { 
-            answer: "",
+            answer: "Helping others",
             class:"cleric"
         }
     },
     {
-        question: "",
+        question: "What's your strategy for dealing with a hostile enemy?",
         answer1: { 
-            answer: "",
+            answer: "I'm a lover not a fighter! Stay far away and help out whoever's in trouble",
             class:"cleric"
         },
         answer2: { 
-            answer: "",
+            answer: "Seek guidance from a higher power and run straight in to save the day",
             class:"paladin"
         },
         answer3: { 
-            answer: "",
+            answer: "Get everyone dancing! Can't be mad if you're dancing",
             class:"bard"
         },
         answer4: { 
-            answer: "",
+            answer: "Punch it til it dies",
             class:"monk"
         }
     },
     {
-        question: "",
+        question: "What was your favourite subject at school?",
         answer1: { 
-            answer: "",
+            answer: "Gymnastics",
             class:"monk"
         },
         answer2: { 
-            answer: "",
+            answer: "Music",
             class:"bard"
         },
         answer3: { 
-            answer: "",
+            answer: "Biology",
             class:"cleric"
         },
         answer4: { 
-            answer: "",
+            answer: "Religious Studies",
             class:"paladin"
         }
     }

@@ -122,8 +122,6 @@ Path Two:
     c. Mother Earth (Druid)
     d. Those who have studied my craft before me (Wizard)
 
-
-
 Path Three:
 1. Are you religious?
     a. Unless MUSIC is a religion then no sir * shreds on guitar * (Bard)
