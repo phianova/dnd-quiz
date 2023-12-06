@@ -106,6 +106,22 @@ Path Two:
     b. Butterfly - Crazy Town (Warlock)
     c. Firestarter - The Prodigy (Sorcerer)
     d. Season of the Witch - Donovan (Wizard)
+3. Question
+    a. (Warlock)
+    b. (Sorcerer)
+    c. (Wizard)
+    d. (Druid)
+4. Question
+    a. (Wizard)
+    b. (Druid)
+    c. (Warlock)
+    d. (Sorcerer)
+5. Question
+    a. (Sorcerer)
+    b. (Warlock)
+    c. (Druid)
+    d. (Wizard)
+
 
 
 Path Three:
@@ -119,5 +135,21 @@ Path Three:
     b. Kung-Fu Fighting - Carl Douglas (Monk)
     c. Faith - George Michael (Paladin)
     d. Thank You For The Music - ABBA (Bard)
+3. Question
+    a. (Bard)
+    b. (Monk)
+    c. (Paladin)
+    d. (Cleric)
+4. Question
+    a. (Cleric)
+    b. (Paladin)
+    c. (Bard)
+    d. (Monk)
+5. Question
+    a. (Monk)
+    b. (Bard)
+    c. (Cleric)
+    d. (Paladin)
+
 
 
