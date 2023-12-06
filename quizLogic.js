@@ -9,56 +9,68 @@
 Will track scores with object/array of scores for each class.
 */
 
-classObject = {
-    bard: {
+classArray = [
+    {
+        class: "barbarian",
         score: 0,
-        img: ""
+        img: "./images/barbarian.svg"
     },
-    barbarian: {
+    {
+        class: "bard",
         score: 0,
-        img: ""
+        img: "./images/bard.svg"
     },
-    cleric:  {
+    {
+        class: "cleric",
         score: 0,
-        img: ""
+        img: "./images/cleric.svg"
     },
-    druid:  {
+    {
+        class: "druid",
         score: 0,
-        img: ""
+        img: "./images/druid.svg"
     },
-    fighter:  {
+    {
+        class: "fighter",
         score: 0,
-        img: ""
+        img: "./images/fighter.svg"
     },
-    monk:  {
+    {
+        class: "monk",
         score: 0,
-        img: ""
+        img: "./images/monk.svg"
     },
-    paladin:  {
+    {
+        class: "paladin",
         score: 0,
-        img: ""
+        img: "./images/paladin.svg"
     },
-    ranger:  {
+    {
+        class: "ranger",
         score: 0,
-        img: ""
+        img: "./images/ranger.svg"
     },
-    rogue:  {
+    {   
+        class: "rogue",
         score: 0,
-        img: ""
+        img: "./images/rogue.svg"
     },
-    sorcerer:  {
+    {
+        class: "sorcerer",
         score: 0,
-        img: ""
+        img: "./images/sorcerer.svg"
     },
-    warlock:  {
+    {
+        class: "warlock",
         score: 0,
-        img: ""
+        img: "./images/warlock.svg"
     },
-    wizard:  {
+    {
+        class: "wizard",  
         score: 0,
-        img: ""
+        img: "./images/wizard.svg"
     }
-}
+]
 
 //Question array for path 1 - collapse if you value your life
 const questionArray1 = [
@@ -406,6 +418,7 @@ const nextQuestion = () => {
     //If currentQuestion is at max, call displayResult()
     if (currentQuestion === 6) {
         displayResult();
+        return false;
     }
     //Use DOM to change question text
     let questionText = document.getElementById("question-question");
@@ -446,25 +459,32 @@ const nextQuestion = () => {
 }
 
 const trackScore = () => {
-    //Where value = class, classObject.("class") ++;
-    let questionName = "question" + currentQuestion;
-    let answer = answerValueFunction(questionName);
+    //Where value = class, classArray.("class") ++;
     if (currentQuestion > 0) {
-        classObject[answer].score ++;
+        let questionName = "question" + currentQuestion;
+        let answer = answerValueFunction(questionName);
+        currentClassObject = classArray.find((a) => a.class === answer);
+        currentClassObject.score ++;
     }
 }
 
 const displayResult = () => {
     //Check max scores and determine results type 
-    //CURRENTLY UNTESTED
     let finalClass = "";
     let finalClassScore = 0;
-    for (let j = 0; j<classObject.length; j++) {
-        if (classObject[j].score.value > finalClassScore) {
-            finalClassScore = classObject[j].score.value;
-            finalClass = classObject[j];
+    let finalClassImg = "";
+    for (let j = 0; j < classArray.length; j++) {
+        if (classArray[j].score > finalClassScore) {
+            finalClassScore = classArray[j].score;
+            finalClass = classArray[j].class;
+            finalClassImg = classArray[j].img
         }
     }
+    let resultsText = document.getElementById("results-type");
+    let resultsImage = document.getElementById("results-image");
+    resultsText.innerText = capitalLetter(finalClass);
+    resultsImage.src = finalClassImg;
+
     //Hide questions screen, display results screen (incl. restart button)
     switchDisplay("question", false);
     switchDisplay("results", true);
@@ -496,3 +516,7 @@ const answerValueFunction = (name) => {
     return answerValue;
 }
 
+//REUSABLE: Capitalise class names for display
+const capitalLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
