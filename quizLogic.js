@@ -25,47 +25,58 @@ const startQuiz = () => {
 
 //Set path (ie question array) on click of button on path screen
 const determinePath = () => {
+    //Display input prompt if no option selected
+    if (inputChecked("path") === false) {
+        switchDisplay("input-prompt", true)
+    } else {
+    //Make sure input prompt not displaying
+        switchDisplay("input-prompt", false)
     //Select corresponding question array for selected path
-    pathValue = answerValueFunction("path");
-    questionArray = pathQuestion[pathValue];
+        pathValue = answerValueFunction("path");
+        questionArray = pathQuestion[pathValue];
 
     //Hide path screen
-    switchDisplay("path-question", false);
+        switchDisplay("path-question", false);
 
     //Show questions screen
-    switchDisplay("question", true);
-    nextQuestion();
+        switchDisplay("question", true);
+        nextQuestion();
 
     //Reset path inputs
-    resetInput("path");
+        resetInput("path");
+    }
 } 
 
 //Progress to next question on click of next question button
 const nextQuestion = () => {
+    if (currentQuestion > 0 && inputChecked("question" + currentQuestion) === false) {
+        switchDisplay("input-prompt", true)
+    } else {
+        switchDisplay("input-prompt", false)
     //Call trackScore function
-    trackScore();
+        trackScore();
 
     //Increment current question upward
-    currentQuestion ++;
+        currentQuestion ++;
 
     //If currentQuestion is at 4, change button text
-    if (currentQuestion === 5) {
-        document.getElementById("next-button").innerText = "See results"
-    }
+        if (currentQuestion === 5) {
+            document.getElementById("next-button").innerText = "See results"
+        }
 
     //If currentQuestion is at max, call displayResult()
-    if (currentQuestion === 6) {
-        displayResult();
-        return false;
-    }
+        if (currentQuestion === 6) {
+            displayResult();
+            return false;
+        }
 
     //Use DOM to change question text, input names and input values
-    answerChanges();
+        answerChanges();
 
     //Use DOM to reset radio inputs
-    resetInput("question" + currentQuestion);
+        resetInput("question" + currentQuestion);
+    }
 }
-
 //Update scores based on answers
 const trackScore = () => {
     //Where answer = class, add to class score
@@ -191,4 +202,16 @@ const resetInput = (name) => {
             inputsArray[i].checked = false;
         }
     }
+}
+
+//REUSABLE: Check if at least one input is checked
+const inputChecked = (name) => {
+    let inputsArray = document.getElementsByName(name);
+    let checked = false;
+    for (let i = 0; i < inputsArray.length; i++) {
+        if (inputsArray[i].checked) {
+            checked = true;
+        }
+    }
+    return checked;
 }
