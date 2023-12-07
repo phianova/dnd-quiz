@@ -14,7 +14,7 @@
         <p>Take the quiz and find out!</p>
     </header>
     <main class="w-11/12 md:w-10/12 mx-auto bg-white rounded-3xl h-9/12 px-2 sm:px-10 py-8 border-2 border-gray-400 shadow-lg">
-        <section id="start-screen" class="flex flex-col items-center text-center mx-auto hidden">
+        <section id="start-screen" class="flex flex-col items-center text-center mx-auto">
             <!--TODO turn classes into carousel!-->
             <h2 class="text-lg lg:text-2xl bg-gradient-to-r from-purple-900 to-violet-900 text-white p-10 rounded-full mx-auto lg:mt-10">Want to play DND but don't know what path to choose to start your adventure? Click below to start the quiz and find the character class that best represents you!</h2>
             <button onclick="startQuiz()" class="text-2xl sm:text-5xl font-bold bg-gradient-to-r from-purple-300 to-violet-300 border-4 border-purple-800 border-opacity-40 hover:bg-gradient-to-r hover:from-purple-900 hover:to-violet-900 hover:bg-opacity-80 hover:text-white py-5 px-7 mt-10 mb-3 sm:mb-20 rounded-full">Start quiz</button>
@@ -40,7 +40,7 @@
                 <button id="next-button" onclick="nextQuestion()" class="mx-auto text-center text-xl font-bold bg-gradient-to-r from-purple-300 to-violet-300 border-4 border-purple-800 border-opacity-40 hover:bg-gradient-to-r hover:from-purple-900 hover:to-violet-900 hover:bg-opacity-80 hover:text-white py-5 px-7 mt-5 rounded-full">Next question</button>
             </div>
         </section>
-        <section id="results" class="flex flex-col items-center">
+        <section id="results" class="flex flex-col items-center hidden">
             <div class="flex flex-col items-center bg-purple-300 bg-opacity-60 w-11/12 lg:w-9/12 mx-auto rounded-full">
                 <h2 id="results-header" class="text-xl sm:text-2xl lg:text-3xl p-5 pt-8 font-bold text-center">The results are in!</h2>
                 <h2 class="text-lg font-bold bg-purple-900 text-white p-3 md:p-5 rounded-full mx-auto sm:my-3 text-center">You should play a:</h2>
