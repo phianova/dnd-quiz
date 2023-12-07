@@ -85,10 +85,10 @@ Path One:
     c. Acquire a rag-tag team of misfits and take out anyone that stands in our way (Fighter)
     d. RUN HEADLONG AT THE APOCALYPSE AND DIE A GLORIOUS DEATH! (Barbarian)
 4. Favourite food?
-    a. Popcorn, while I'm watching the events of a battle unfold from the shadows (Rogue)
+    a. Popcorn, while I'm watching some drama unfold from the corner (Rogue)
     b. MEAT! (Barbarian)
     c. I dunno I guess a burger? (Fighter)
-    d. Venison, fresh from the tip of my arrow (Ranger)
+    d. Freshly hunted venison (Ranger)
 5. Favourite song?
     a. Eye of the Tiger - Survivor (Fighter)
     b. Bodies - Drowning Pool (Barbarian)
@@ -100,25 +100,25 @@ Path Two:
     a. The life force of the Earth, harnessed by becoming one with it. A mighty natural force (Druid)
     b. The glory of my bloodline. The gift of my ancestors. I. Am. Power. (Sorceror)
     c. Knowledge, honed and built up over centuries (Wizard)
-    d. I don't know but daddy gave me magics (Warlock)
+    d. Powers is the things the big nice demon man gave me in exchange for my soul (Warlock)
 2. Favourite song?
     a. White Winter Hymnal - Fleet Foxes (Druid)
     b. Butterfly - Crazy Town (Warlock)
     c. Firestarter - The Prodigy (Sorcerer)
     d. Season of the Witch - Donovan (Wizard)
 3. What do you want to be when you grow up?
-    a. A professional sugar baby (Warlock)
+    a. Someone's trophy wife (Warlock)
     b. Rich and powerful (Sorcerer)
     c. An expert in my chosen field (Wizard)
     d. A gardener (Druid)
 4. Accessorize! What are you pairing your outfit with tonight?
-    a. A pair of rounded spectacles with a brass rim (Wizard)
+    a. A pair of round spectacles with a brass rim (Wizard)
     b. Socks and sandals (Druid)
-    c. A diamond tennis bracelet someone bought me (Warlock)
-    d. Some leather gloves to protect me from fire (Sorcerer)
+    c. A diamond tennis bracelet from my rich and powerful husband (Warlock)
+    d. Some fireproof leather gloves (Sorcerer)
 5. Who do you look up to?
     a. My ancestors (Sorcerer)
-    b. Big power demon daddy (Warlock)
+    b. Whoever buys me things (Warlock)
     c. Mother Earth (Druid)
     d. Those who have studied my craft before me (Wizard)
 
@@ -140,7 +140,7 @@ Path Three:
     d. Helping others (Cleric)
 4. What's your strategy for dealing with a hostile enemy?
     a. I'm a lover not a fighter! Stay far away and help out whoever's in trouble (Cleric)
-    b. Seek guidance from a higher power and run straight in to save the day (Paladin)
+    b. Say a quick prayer and run straight in to save the day (Paladin)
     c. Get everyone dancing! Can't be mad if you're dancing (Bard)
     d. Punch it til it dies (Monk)
 5. What was your favourite class at school?

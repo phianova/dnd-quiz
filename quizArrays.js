@@ -3,66 +3,78 @@ const classArray = [
     {
         class: "barbarian",
         score: 0,
-        img: "./images/barbarian.svg"
+        img: "./images/barbarian.svg",
+        link: "https://www.dndbeyond.com/classes/barbarian"
     },
     {
         class: "bard",
         score: 0,
-        img: "./images/bard.svg"
+        img: "./images/bard.svg",
+        link: "https://www.dndbeyond.com/classes/bard"
     },
     {
         class: "cleric",
         score: 0,
-        img: "./images/cleric.svg"
+        img: "./images/cleric.svg",
+        link: "https://www.dndbeyond.com/classes/cleric"
     },
     {
         class: "druid",
         score: 0,
-        img: "./images/druid.svg"
+        img: "./images/druid.svg",
+        link: "https://www.dndbeyond.com/classes/druid"
     },
     {
         class: "fighter",
         score: 0,
-        img: "./images/fighter.svg"
+        img: "./images/fighter.svg",
+        link: "https://www.dndbeyond.com/classes/fighter"
     },
     {
         class: "monk",
         score: 0,
-        img: "./images/monk.svg"
+        img: "./images/monk.svg",
+        link: "https://www.dndbeyond.com/classes/monk"
     },
     {
         class: "paladin",
         score: 0,
-        img: "./images/paladin.svg"
+        img: "./images/paladin.svg",
+        link: "https://www.dndbeyond.com/classes/paladin"
     },
     {
         class: "ranger",
         score: 0,
-        img: "./images/ranger.svg"
+        img: "./images/ranger.svg",
+        link: "https://www.dndbeyond.com/classes/ranger"
     },
     {   
         class: "rogue",
         score: 0,
-        img: "./images/rogue.svg"
+        img: "./images/rogue.svg",
+        link: "https://www.dndbeyond.com/classes/rogue"
     },
     {
         class: "sorcerer",
         score: 0,
-        img: "./images/sorcerer.svg"
+        img: "./images/sorcerer.svg",
+        link: "https://www.dndbeyond.com/classes/sorcerer"
     },
     {
         class: "warlock",
         score: 0,
-        img: "./images/warlock.svg"
+        img: "./images/warlock.svg",
+        link: "https://www.dndbeyond.com/classes/warlock"
     },
     {
         class: "wizard",  
         score: 0,
-        img: "./images/wizard.svg"
+        img: "./images/wizard.svg",
+        link: "https://www.dndbeyond.com/classes/wizard"
     }
 ]
 
-//Question array for path 1 - collapse if you value your life
+//Question array for path 1 (Barbarian, Fighter, Ranger, Rogue) - collapse if you value your life
 const questionArray1 = [
     {
         question: "In a battle sitch, where do you want to be?",
@@ -124,7 +136,7 @@ const questionArray1 = [
     {
         question: "Favourite food?",
         answer1: { 
-            answer: "Popcorn, while I'm watching the events of a battle unfold from the shadows",
+            answer: "Popcorn, while I'm watching some drama unfold from the corner",
             class:"rogue"
         },
         answer2: { 
@@ -136,7 +148,7 @@ const questionArray1 = [
             class:"fighter"
         },
         answer4: { 
-            answer: "Venison, fresh from the tip of my arrow",
+            answer: "Freshly hunted venison",
             class:"ranger"
         }
     },
@@ -161,7 +173,7 @@ const questionArray1 = [
     }
 ]
 
-//Question array for path 2 - collapse if you value your life
+//Question array for path 2 (Druid, Sorcerer, Wizard, Warlock) - collapse if you value your life
 const questionArray2 = [
     {
         question: "What is power?",
@@ -178,7 +190,7 @@ const questionArray2 = [
             class:"wizard"
         },
         answer4: { 
-            answer: "I don't know but daddy gave me magics",
+            answer: "Powers is the things the big nice demon man gave me in exchange for my soul",
             class:"warlock"
         }
     },
@@ -204,7 +216,7 @@ const questionArray2 = [
     {
         question: "What do you want to be when you grow up?",
         answer1: { 
-            answer: "A professional sugar baby",
+            answer: "Someone's trophy wife",
             class:"warlock"
         },
         answer2: { 
@@ -223,7 +235,7 @@ const questionArray2 = [
     {
         question: "Accessorize! What are you pairing your outfit with tonight?",
         answer1: { 
-            answer: "A pair of rounded spectacles with a brass rim",
+            answer: "A pair of round spectacles with a brass rim",
             class:"wizard"
         },
         answer2: { 
@@ -231,11 +243,11 @@ const questionArray2 = [
             class:"druid"
         },
         answer3: { 
-            answer: "A diamond tennis bracelet someone bought me",
+            answer: "A diamond tennis bracelet from my rich and powerful husband",
             class:"warlock"
         },
         answer4: { 
-            answer: "Some leather gloves to protect me from fire",
+            answer: "Some fireproof leather gloves",
             class:"sorcerer"
         }
     },
@@ -246,7 +258,7 @@ const questionArray2 = [
             class:"sorcerer"
         },
         answer2: { 
-            answer: "Big power demon daddy",
+            answer: "Whoever buys me things",
             class:"warlock"
         },
         answer3: { 
@@ -293,7 +305,7 @@ const questionArray3 = [
         },
         answer3: { 
             answer: "Faith - George Michael",
-            class:"monk"
+            class:"paladin"
         },
         answer4: { 
             answer: "Thank You for the Music - ABBA",
@@ -326,7 +338,7 @@ const questionArray3 = [
             class:"cleric"
         },
         answer2: { 
-            answer: "Seek guidance from a higher power and run straight in to save the day",
+            answer: "Say a quick prayer and run straight in to save the day",
             class:"paladin"
         },
         answer3: { 

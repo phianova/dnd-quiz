@@ -83,19 +83,23 @@ const displayResult = () => {
     let finalClass = "";
     let finalClassScore = 0;
     let finalClassImg = "";
+    let finalClassLink = "";
     for (let j = 0; j < classArray.length; j++) {
         if (classArray[j].score > finalClassScore) {
             finalClassScore = classArray[j].score;
             finalClass = classArray[j].class;
-            finalClassImg = classArray[j].img
+            finalClassImg = classArray[j].img;
+            finalClassLink = classArray[j].link;
         }
     }
 
     //Change text and image dependent on result
     let resultsText = document.getElementById("results-type");
     let resultsImage = document.getElementById("results-image");
+    let resultsImageLink = document.getElementById("results-image-link");
     resultsText.innerText = capitalLetter(finalClass);
     resultsImage.src = finalClassImg;
+    resultsImageLink.href = finalClassLink;
 
     //Hide questions screen, display results screen (incl. restart button)
     switchDisplay("question", false);
