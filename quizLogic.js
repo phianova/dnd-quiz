@@ -114,6 +114,10 @@ const restartQuiz = () => {
     //hide results screen, display start screen
     switchDisplay("results", false);
     switchDisplay("start-screen", true);
+
+    //Reset question button text
+    document.getElementById("next-button").innerText = "Next question"
+
 }
 
 //Change answer and question text and inputs each time nextQuestion() is called
@@ -126,6 +130,7 @@ const answerChanges = () => {
     let answer4Text = document.getElementById("answer4-label");
 
     questionText.innerHTML = questionArray[currentQuestion-1].question
+    //TODO figure out how to dynamically generate variable names to make below a loop
     answer1Text.innerHTML = questionArray[currentQuestion-1].answer1.answer
     answer2Text.innerHTML = questionArray[currentQuestion-1].answer2.answer
     answer3Text.innerHTML = questionArray[currentQuestion-1].answer3.answer
