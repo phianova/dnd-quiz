@@ -1,12 +1,20 @@
-/* Functions needed:
-1. Start quiz
-2. Move question
-3. Determine path
-4. Track score
-5. Display result
-6. Restart
+/* 
+Quiz functions:
+1. Start quiz (startQuiz())
+2. Determine path (determinePath())
+3. Move to next question (nextQuestion())
+4. Track score (trackScore())
+5. Display result (displayResult())
+6. Restart (restartQuiz())
 
-Will track scores with object/array of scores for each class.
+Functions for specific tasks that could be reused:
+1. Change question and answer text based on question (answerChanges())
+2. Toggle whether screen is displayed (switchDisplay())
+3. Determine which radio input is checked (answerValueFunction())
+4. Capitalise class name for final display (capitalLetter())
+5. Reset all radio inputs to blank (resetInput())
+6. Ensure at least one radio input is checked (inputChecked())
+7. Set text and value of inputs based on an old name and new name given (nameAnswers())
 */
 
 //Set current question to 0 and set blank question path array
@@ -77,6 +85,7 @@ const nextQuestion = () => {
         resetInput("question" + currentQuestion);
     }
 }
+
 //Update scores based on answers
 const trackScore = () => {
     //Where answer = class, add to class score
@@ -119,6 +128,9 @@ const displayResult = () => {
 
 //Restart quiz on click of restart button
 const restartQuiz = () => {
+    //Reset answer names
+    nameAnswers(("question" + (currentQuestion-1)), "question");
+    
     //Reset score and path values
     currentQuestion = 0;
     questionArray = [];
@@ -145,28 +157,19 @@ const answerChanges = () => {
     let answer4Text = document.getElementById("answer4-label");
 
     questionText.innerHTML = questionArray[currentQuestion-1].question
-    //TODO figure out how to dynamically generate variable names to make below a loop
     answer1Text.innerHTML = questionArray[currentQuestion-1].answer1.answer
     answer2Text.innerHTML = questionArray[currentQuestion-1].answer2.answer
     answer3Text.innerHTML = questionArray[currentQuestion-1].answer3.answer
     answer4Text.innerHTML = questionArray[currentQuestion-1].answer4.answer
 
-    //Use DOM to change input name
-    let answer1Input = document.getElementById("answer1");
-    let answer2Input = document.getElementById("answer2");
-    let answer3Input = document.getElementById("answer3");
-    let answer4Input = document.getElementById("answer4");
-
-    answer1Input.name = "question" + currentQuestion;
-    answer2Input.name = "question" + currentQuestion;
-    answer3Input.name = "question" + currentQuestion;
-    answer4Input.name = "question" + currentQuestion;
-
-    //Use DOM to set value of answers to correct DND class for scoring
-    answer1Input.value = questionArray[currentQuestion-1].answer1.class;
-    answer2Input.value = questionArray[currentQuestion-1].answer2.class;
-    answer3Input.value = questionArray[currentQuestion-1].answer3.class;
-    answer4Input.value = questionArray[currentQuestion-1].answer4.class;
+    //Use DOM to change input name and set value of answers to correct DND class for scoring
+    if (currentQuestion <= 1) {
+        nameAnswers("question", ("question"+currentQuestion));
+    } else if (currentQuestion === 6) {
+        nameAnswers("question" + (currentQuestion-1), "question");
+    } else {
+        nameAnswers("question" + (currentQuestion-1), ("question" + currentQuestion));
+    }
 
 }
 
@@ -214,4 +217,17 @@ const inputChecked = (name) => {
         }
     }
     return checked;
+}
+
+//REUSABLE: Update question input names to reflect current question
+const nameAnswers = (oldName, newName) => {
+    let inputsArray = Array.prototype.slice.call(document.getElementsByName(oldName));
+    for (let i = 0; i < inputsArray.length; i++) {
+        inputsArray[i].name = newName;
+        if (currentQuestion > 0 && currentQuestion != 6) {
+            let answerKey = Object.keys(questionArray[currentQuestion-1])[i+1]
+            inputsArray[i].value = questionArray[currentQuestion-1][answerKey].class;
+        }
+    }
+    
 }

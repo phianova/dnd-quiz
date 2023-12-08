@@ -15,7 +15,6 @@
     </header>
     <main class="w-11/12 md:w-10/12 mx-auto bg-white rounded-3xl h-9/12 px-2 sm:px-10 py-8 border-2 border-gray-400 shadow-lg">
         <section id="start-screen" class="flex flex-col items-center text-center mx-auto">
-            <!--TODO turn classes into carousel!-->
             <h2 class="text-lg lg:text-2xl bg-gradient-to-r from-purple-900 to-violet-900 text-white p-10 rounded-full mx-auto lg:mt-10">Want to play DND but don't know what path to choose to start your adventure? Click below to start the quiz and find the character class that best represents you!</h2>
             <button onclick="startQuiz()" class="text-2xl sm:text-5xl font-bold bg-gradient-to-r from-purple-300 to-violet-300 border-4 border-purple-800 border-opacity-40 hover:bg-gradient-to-r hover:from-purple-900 hover:to-violet-900 hover:bg-opacity-80 hover:text-white py-5 px-7 mt-10 mb-3 sm:mb-20 rounded-full">Start quiz</button>
         </section>
@@ -31,10 +30,10 @@
         <section id="question" class="flex flex-col items-center hidden">
             <h2 id="question-question" class="text-xl sm:text-2xl p-5 font-bold">Question text</h2>
             <div class="flex flex-col justify-around items-base w-10/12 mx-auto my-5">
-                <div class="py-2 sm:py-3 lg:pl-20"><label id="answer1-label" name="answer-label" for="answer1" class="pr-5 lg:text-xl">Answer 1</label><input id="answer1" name="question" type="radio" value="answer1" required></div>
-                <div class="py-2 sm:py-3 lg:pl-20"><label id="answer2-label" name="answer-label" for="answer2" class="pr-5 lg:text-xl">Answer 2</label><input id="answer2" name="question" type="radio" value="answer2" required></div>
-                <div class="py-2 sm:py-3 lg:pl-20"><label id="answer3-label" name="answer-label" for="answer3" class="pr-5 lg:text-xl">Answer 3</label><input id="answer3" name="question" type="radio" value="answer3" required></div>
-                <div class="py-2 sm:py-3 lg:pl-20"><label id="answer4-label" name="answer-label" for="answer4" class="pr-5 lg:text-xl">Answer 4</label><input id="answer4" name="question" type="radio" value="answer4" required></div>
+                <div class="py-2 sm:py-3 lg:pl-20"><label id="answer1-label" for="answer1" class="pr-5 lg:text-xl">Answer 1</label><input id="answer1" name="question" type="radio" value="answer1" required></div>
+                <div class="py-2 sm:py-3 lg:pl-20"><label id="answer2-label" for="answer2" class="pr-5 lg:text-xl">Answer 2</label><input id="answer2" name="question" type="radio" value="answer2" required></div>
+                <div class="py-2 sm:py-3 lg:pl-20"><label id="answer3-label" for="answer3" class="pr-5 lg:text-xl">Answer 3</label><input id="answer3" name="question" type="radio" value="answer3" required></div>
+                <div class="py-2 sm:py-3 lg:pl-20"><label id="answer4-label" for="answer4" class="pr-5 lg:text-xl">Answer 4</label><input id="answer4" name="question" type="radio" value="answer4" required></div>
             </div>
             <div>
                 <button id="next-button" onclick="nextQuestion()" class="mx-auto text-center text-xl font-bold bg-gradient-to-r from-purple-300 to-violet-300 border-4 border-purple-800 border-opacity-40 hover:bg-gradient-to-r hover:from-purple-900 hover:to-violet-900 hover:bg-opacity-80 hover:text-white py-5 px-7 mt-5 rounded-full">Next question</button>
