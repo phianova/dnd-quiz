@@ -119,6 +119,9 @@ const displayResult = () => {
 
 //Restart quiz on click of restart button
 const restartQuiz = () => {
+    //Reset answer names
+    nameAnswers();
+    
     //Reset score and path values
     currentQuestion = 0;
     questionArray = [];
@@ -151,22 +154,9 @@ const answerChanges = () => {
     answer3Text.innerHTML = questionArray[currentQuestion-1].answer3.answer
     answer4Text.innerHTML = questionArray[currentQuestion-1].answer4.answer
 
-    //Use DOM to change input name
-    let answer1Input = document.getElementById("answer1");
-    let answer2Input = document.getElementById("answer2");
-    let answer3Input = document.getElementById("answer3");
-    let answer4Input = document.getElementById("answer4");
-
-    answer1Input.name = "question" + currentQuestion;
-    answer2Input.name = "question" + currentQuestion;
-    answer3Input.name = "question" + currentQuestion;
-    answer4Input.name = "question" + currentQuestion;
-
-    //Use DOM to set value of answers to correct DND class for scoring
-    answer1Input.value = questionArray[currentQuestion-1].answer1.class;
-    answer2Input.value = questionArray[currentQuestion-1].answer2.class;
-    answer3Input.value = questionArray[currentQuestion-1].answer3.class;
-    answer4Input.value = questionArray[currentQuestion-1].answer4.class;
+    //Use DOM to change input name and set value of answers to correct DND class for scoring
+    
+    nameAnswers();
 
 }
 
@@ -214,4 +204,32 @@ const inputChecked = (name) => {
         }
     }
     return checked;
+}
+
+//REUSABLE: Update question input names to reflect current question
+const nameAnswers = (name) => {
+    let inputsNode = [];
+    let inputsArray = [];
+
+    if (currentQuestion <= 1) {
+        inputsNode = document.getElementsByName("question");
+    } else {
+        inputsNode = document.getElementsByName("question" + (currentQuestion-1));
+    }
+    inputsArray = Array.prototype.slice.call(inputsNode);
+
+    if (currentQuestion === 6) {
+        for (let i = 0; i < inputsArray.length; i++) {
+            inputsArray[i].name = "question"
+        }
+    } else {
+        for (let i = 0; i < inputsArray.length; i++) {
+            inputsArray[i].name = "question" + (currentQuestion)
+            
+            if (currentQuestion > 0) {
+                let answerKey = Object.keys(questionArray[currentQuestion-1])[i+1]
+                inputsArray[i].value = questionArray[currentQuestion-1][answerKey].class;
+            }
+        }
+    }
 }
